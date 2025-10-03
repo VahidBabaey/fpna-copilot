@@ -8,6 +8,7 @@ from agent.tools.metrics import (
 def _mk_period(s):  # helper
     return pd.Period(s, freq="M")
 
+
 def test_revenue_vs_budget_simple():
     # tiny synthetic data (already USD-projected like Milestone 1 output)
     actuals = pd.DataFrame({
