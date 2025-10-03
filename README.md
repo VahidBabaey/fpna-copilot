@@ -13,29 +13,31 @@ This app builds a small **AI-style agent** that interprets CFO questions, runs *
 
 ---
 
-## Repo structure
+# Repo structure
 
+```
 fpna-copilot/
-├─ app.py
-├─ agent/
-│ ├─ init.py
-│ ├─ intent_router.py # classify query + extract month/range
-│ ├─ planners.py # map intent → metrics + chart + text
-│ ├─ answer_formatter.py # concise, board-ready sentences
-│ └─ tools/
-│ ├─ data_loader.py # read xlsx, normalize months, FX→USD
-│ ├─ metrics.py # revenue, cogs, opex, gm%, ebitda, runway
-│ ├─ charts.py # plotly figures
-│ ├─ finance_utils.py # month parsing, % safety, money format
-│ └─ pdf_export.py # (optional) 1–2 page PDF assembly
-├─ data/
-│ └─ finance.xlsx # Excel with sheets: actuals/budget/fx/cash
-├─ tests/
-│ ├─ conftest.py
-│ ├─ test_intents.py
-│ └─ test_metrics.py
-├─ requirements.txt
-└─ README.md
+├── app.py
+├── agent/
+├── __init__.py
+├── intent_router.py        # classify query + extract month/range
+├── planners.py             # map intent → metrics + chart + text
+├── answer_formatter.py     # concise, board-ready sentences
+├── tools/
+│   ├── data_loader.py      # read xlsx, normalize months, FX→USD
+│   ├── metrics.py          # revenue, cogs, opex, gm%, ebitda, runway
+│   ├── charts.py           # plotly figures
+│   └── finance_utils.py    # month parsing, % safety, money format
+├── pdf_export.py           # (optional) 1–2 page PDF assembly
+├── data/
+│   └── finance.xlsx        # Excel with sheets: actuals/budget/fx/cash
+├── tests/
+│   ├── conftest.py
+│   ├── test_intents.py
+│   └── test_metrics.py
+├── requirements.txt
+└── README.md
+```
 
 
 ## Quickstart (Windows + venv)
